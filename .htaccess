@@ -1,0 +1,12 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(?:common|console|environments|runtime|vendor|vagrant)(?:/|$) - [F,L,NC]
+    RewriteRule ^(?:composer\.(?:json|lock)|yii(?:\.bat)?|init(?:\.bat)?|requirements\.php)$ - [F,L,NC]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+</IfModule>
