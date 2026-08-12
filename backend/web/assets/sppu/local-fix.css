@@ -111,3 +111,36 @@
         white-space: nowrap;
     }
 }
+
+/* RIS: official Appendix 63 table structure. */
+.ris-paper table { table-layout: fixed; }
+.ris-paper .ris-meta { margin-bottom: 0; }
+.ris-paper .ris-meta td { height: 25px; padding: 4px 6px; font-size: 10px; }
+.ris-items { margin-bottom: 0 !important; }
+.ris-items col.stock { width: 9%; }
+.ris-items col.unit { width: 6%; }
+.ris-items col.description { width: 30%; }
+.ris-items col.qty { width: 11%; }
+.ris-items col.yes,.ris-items col.no { width: 9%; }
+.ris-items col.issue-qty { width: 11%; }
+.ris-items col.remarks { width: 15%; }
+.ris-items th { padding: 4px 3px !important; font-size: 9px !important; }
+.ris-items td { height: 24px; padding: 3px 4px !important; font-size: 9px !important; }
+.ris-purpose { min-height: 62px !important; margin: 0 !important; border-top: 0 !important; }
+.ris-signatures { margin-top: 0 !important; }
+.ris-signatures th,.ris-signatures td { padding: 4px 5px !important; font-size: 9px !important; }
+.ris-signatures th:first-child,.ris-signatures td:first-child { width: 14%; text-align: left; }
+.ris-signatures td { height: 22px !important; vertical-align: middle !important; }
+.ris-signatures tr:nth-child(2) td { height: 44px !important; }
+
+@media print {
+    .ris-paper { padding: 2mm 4mm !important; }
+    .ris-paper .form-title { min-height: 18mm; margin-bottom: 1mm; }
+    .ris-paper .ris-meta td { height: 5mm; padding: 1mm; font-size: 7pt; }
+    .ris-items th { padding: .8mm .5mm !important; font-size: 6.5pt !important; }
+    .ris-items td { height: 5.2mm; padding: .6mm !important; font-size: 6.5pt !important; }
+    .ris-purpose { min-height: 15mm !important; padding: 2mm !important; font-size: 7pt !important; }
+    .ris-signatures th,.ris-signatures td { padding: 1mm !important; font-size: 6.5pt !important; }
+    .ris-signatures td { height: 5mm !important; }
+    .ris-signatures tr:nth-child(2) td { height: 10mm !important; }
+}
